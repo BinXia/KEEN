@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>KEEN GROUP</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Datatables -->
+    <link href="vendor/datatables/datatables.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <style>
+      body {
+        padding-top: 54px;
+      }
+      @media (min-width: 992px) {
+        body {
+          padding-top: 56px;
+        }
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Knowledge Engineering and Event Mining</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div id="PresentationsShell" class="col-sm-12 margin" style="margin-top: 15px">
+          <table id="Presentations" class="display" width="100%"></table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Datatables -->
+    <script src="vendor/datatables/datatables.min.js"></script>
+
+    <!-- Infomation -->
+    <script src="vendor/resource/info.js"></script>
+    <script src="vendor/resource/common.js"></script>
+
+
+    <script type="text/javascript">
+      
+      var SubList;
+      var colOptionsM = [];
+      var datasetM = [];
+
+      $(document).ready(function(){
+
+        var Presentations = $('#Presentations').DataTable( {
+          data: presentations,
+          columns: [
+            { data: 0, title: "Date"},
+            { data: 1, title: "Category", className: "dt-center",},
+            { data: 2, title: "Title", width: "40%",
+              fnCreatedCell: function (nTd, sData, oData, iRow, iCol) {
+                if (localSign == 0) {
+                  $(nTd).html("<a href="+papers[sData]["PDF"]+" target=\"view_window\">"+sData+"</a>");
+                }
+                else {
+                  $(nTd).html("<a href="+papers[sData]["PDF_Local"]+" target=\"view_window\">"+sData+"</a>");
+                }
+              }
+            },
+            { data: 3, title: "Speaker", className: "dt-center",
+              fnCreatedCell: function (nTd, sData, oData, iRow, iCol) {
+                if (members[sData].hasOwnProperty("Homepage")) {
+                  $(nTd).html("<a href="+members[sData]["Homepage"]+">"+sData+"</a>")
+                }
+                else {
+                  $(nTd).html(sData)
+                }
+              }
+            },
+            { data: 4, title: "Supplement", width: "10%", className: "dt-center"},
+          ],
+          dom: 'Bfrtip',
+          buttons: [
+            // {
+            //   text: 'Add',
+            //   action: function () {
+            //     var para = {
+            //       "id":"Modal",
+            //       "size":"modal-dialog modal-lg",
+            //       "title":"Add new presentation",
+            //       "parent":$("#PresentationsShell"),
+            //       "subject":[
+            //         creSupplementList($("<div>"),"SubList")
+            //       ],
+            //       "buttonID":"AddPresentation",
+            //       "button":"Add",
+            //       "EVENT":
+            //         function AddPresentation(){
+                      
+            //         }
+            //     };
+            //     initModal(para);
+            //   }
+            // },
+            {
+              text: 'Details',
+              action: function () {
+                if (Presentations.$('tr.selected').length != 0) {
+                  var para = {
+                    "id":"Modal",
+                    "size":"modal-dialog modal-lg",
+                    "title":Presentations.rows('.selected').data()[0][2],
+                    "parent":$("#PresentationsShell"),
+                    "subject":[
+                      creSupplementList($("<div>"),"SubList")
+                    ],
+                    "backdrop":true,
+                    "buttonID":"Close",
+                    "button":"Close",
+                    "EVENT":
+                      function Close(){
+                        $("#closeSubModal").click();
+                      }
+                  };
+                  initModal(para);
+                  initModalList({"Supplement":Presentations.rows('.selected').data()[0][2]},"SubList");
+                }
+                else {
+                  alert("Please select a presentation!")
+                }
+              }
+            }
+          ],
+          order: [[ 0, "desc" ]],
+        });
+        initListListeners("Presentations",Presentations);
+      })
+            
+
+    </script>
+  </body>
+</html>
