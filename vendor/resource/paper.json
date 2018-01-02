@@ -40,7 +40,7 @@
 
 	"Generating Adversarial Malware Examples for Black-Box Attacks Based on GAN":{
 		"PDF":"https://arxiv.org/abs/1702.05983",
-		"PDF_Local":"MalGAN_IJCAI_2017_Hu_Tan.pdf",
+		"PDF_Local":"resource/2017/12/MalGAN_IJCAI_2017_Hu_Tan.pdf",
 		"Supplement":{
 			"Generating Adversarial Malware Examples for Black-Box Attacks Based on GAN.pptx":{
 				"Type":"PPT",
@@ -48,5 +48,10 @@
 				"URL_Local":"resource/2017/12/Generating Adversarial Malware Examples for Black-Box Attacks Based on GAN.pptx"
 			}
 		}
+	},
+
+	"Named Entity Recognition for Novel Types by Transfer Learning":{
+		"PDF":"https://arxiv.org/abs/1610.09914",
+		"PDF_Local":"resource/2018/01/Named Entity Recognition for Novel Types by Transfer Learning.pdf"
 	}
 }

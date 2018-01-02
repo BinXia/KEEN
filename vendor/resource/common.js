@@ -258,6 +258,7 @@ function initMeetingDate(){
 
 function initModalList(listType,id){
     datasetM = [];
+    colOptionsM = [];
     if (listType.hasOwnProperty("Supplement")) {
       colOptionsM = [
         { data: 0},

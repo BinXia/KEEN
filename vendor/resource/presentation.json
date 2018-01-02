@@ -3,6 +3,7 @@
 	    ["2017/12/30","NLP","SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient","Shuo Wang","Yes"],
 	    ["2017/12/30","NLP","STRICT: Information Retrieval Based Search Term Identification for Concept Location","Linqing Liu","Yes"],
 	    ["2017/12/23","GAN","Generating Adversarial Malware Examples for Black-Box Attacks Based on GAN","Jie Hang","Yes"],
-	    ["2017/12/23","GAN","In Defense of Fully Connected Layers in Visual Representation Transfer","Keji Han","Yes"]
+	    ["2017/12/23","GAN","In Defense of Fully Connected Layers in Visual Representation Transfer","Keji Han","Yes"],
+	    ["2018/01/06","NLP","Named Entity Recognition for Novel Types by Transfer Learning","Yu Wang","No"]
 	]
 }
