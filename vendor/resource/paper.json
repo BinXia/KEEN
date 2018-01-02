@@ -53,5 +53,10 @@
 	"Named Entity Recognition for Novel Types by Transfer Learning":{
 		"PDF":"https://arxiv.org/abs/1610.09914",
 		"PDF_Local":"resource/2018/01/Named Entity Recognition for Novel Types by Transfer Learning.pdf"
+	},
+
+	"Supervised Deep Features for Software Functional Clone Detection by Exploiting Lexical and Syntactical Information in Source Code":{
+		"PDF":"https://pdfs.semanticscholar.org/29d2/ec9b25e5a0844d156a0e7bc19df24a2c3a48.pdf",
+		"PDF_Local":"resource/2018/01/Supervised Deep Features for Software Functional Clone Detection by Exploiting Lexical and Syntactical Information in Source Code.pdf"
 	}
 }
