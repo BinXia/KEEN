@@ -167,7 +167,7 @@ function initList(List,para){
       { data: 3, title: "Speaker", className: "dt-center",
         fnCreatedCell: function (nTd, sData, oData, iRow, iCol) {
           if (members[sData].hasOwnProperty("Homepage")) {
-            $(nTd).html("<a href="+members[sData]["Homepage"]+">"+sData+"</a>")
+            $(nTd).html("<a href=\""+members[sData]["Homepage"]+"\" target=\"view_window\">"+sData+"</a>")
           }
           else {
             $(nTd).html(sData)

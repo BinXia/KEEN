@@ -57,6 +57,30 @@
 
 	"Supervised Deep Features for Software Functional Clone Detection by Exploiting Lexical and Syntactical Information in Source Code":{
 		"PDF":"https://pdfs.semanticscholar.org/29d2/ec9b25e5a0844d156a0e7bc19df24a2c3a48.pdf",
-		"PDF_Local":"resource/2018/01/Supervised Deep Features for Software Functional Clone Detection by Exploiting Lexical and Syntactical Information in Source Code.pdf"
+		"PDF_Local":"resource/2018/01/Supervised Deep Features for Software Functional Clone Detection by Exploiting Lexical and Syntactical Information in Source Code.pdf",
+		"Supplement":{
+			"SoftwareClone.pdf":{
+				"Type":"PPT",
+				"URL":"resource/2018/01/SoftwareClone.pdf",
+				"URL_Local":"resource/2018/01/SoftwareClone.pdf"
+			}
+		}
+	},
+
+	"NIPS 2016 Tutorial: Generative Adversarial Networks":{
+		"PDF":"https://arxiv.org/abs/1701.00160",
+		"PDF_Local":"resource/2018/01/1701.00160.pdf",
+		"Supplement":{
+			"2016-12-04-NIPS.pdf":{
+				"Type":"PPT",
+				"URL":"http://www.iangoodfellow.com/slides/2016-12-04-NIPS.pdf",
+				"URL_Local":"resource/2018/01/2016-12-04-NIPS.pdf"
+			},
+			"gan_tutorial.pdf":{
+				"Type":"PPT",
+				"URL":"https://github.com/mingyuliutw/cvpr2017_gan_tutorial",
+				"URL_Local":"resource/2018/01/gan_tutorial.pdf"
+			}
+		}
 	}
 }
