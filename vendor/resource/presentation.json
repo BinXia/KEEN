@@ -5,7 +5,7 @@
 	    ["2017/12/23","GAN","Generating Adversarial Malware Examples for Black-Box Attacks Based on GAN","Jie Hang","Yes"],
 	    ["2017/12/23","GAN","In Defense of Fully Connected Layers in Visual Representation Transfer","Keji Han","Yes"],
 	    ["2018/01/06","NLP","Named Entity Recognition for Novel Types by Transfer Learning","Yu Wang","No"],
-	    ["2018/01/06","NLP","Supervised Deep Features for Software Functional Clone Detection by Exploiting Lexical and Syntactical Information in Source Code","Ziye Zhu","Yes"],
-	    ["2018/01/20","GAN","NIPS 2016 Tutorial: Generative Adversarial Networks","Bin Xia","Yes"]
+	    ["2018/01/06","SWE","Supervised Deep Features for Software Functional Clone Detection by Exploiting Lexical and Syntactical Information in Source Code","Ziye Zhu","Yes"],
+	    ["2018/01/27","GAN","NIPS 2016 Tutorial: Generative Adversarial Networks","Bin Xia","Yes"]
 	]
 }
